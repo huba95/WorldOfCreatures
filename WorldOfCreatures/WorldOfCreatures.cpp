@@ -9,6 +9,7 @@ int main()
 	
 	Game play;
 	int typenumber = play.Start();
+	play.RandomMonster();
 
 	return 0;
  

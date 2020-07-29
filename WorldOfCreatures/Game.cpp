@@ -22,7 +22,7 @@ int Game::Start()
 
 std::string Game::ReadFile(fs::path path)
 {
-	std::ifstream file(path.c_str());
+	std::ifstream file(path);
 	std::string text;
 	while (!file.eof())
 	{
@@ -31,5 +31,11 @@ std::string Game::ReadFile(fs::path path)
 		text += some + "\n";
 	}
 	return text;
+}
+
+void Game::RandomMonster()
+{
+	int random= rand() % monsters.size();
+	monsters[random].Print();
 }
 

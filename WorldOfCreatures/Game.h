@@ -11,10 +11,11 @@ class Game
 {
 private:
 	std::vector<Monster> monsters{};
+	std::string ReadFile(fs::path path);
 public:
 	Game();
 	int Start();
-	std::string ReadFile(fs::path path);
+	void RandomMonster();
 
 
 
